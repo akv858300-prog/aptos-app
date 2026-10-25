@@ -1,0 +1,560 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f9f7;
+  color: #1d2b21;
+}
+
+/* ========================= PAGE ========================= */
+.videoediting-page {
+  min-height: 100vh;
+  padding: 40px 70px 80px;
+}
+
+/* ========================= HEADER ========================= */
+.videoediting-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 38px;
+}
+
+.videoediting-header h1 {
+  margin: 9px 0;
+  font-size: 39px;
+  letter-spacing: -1px;
+}
+
+.videoediting-header p {
+  margin: 0;
+  color: #68736c;
+  font-size: 15px;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.section-kicker {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #557463;
+}
+
+/* ========================= BACK BUTTON ========================= */
+.back-button {
+  border: 1px solid #d7dfd9;
+  background: white;
+  padding: 11px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.back-button:hover {
+  background: #f1f5f2;
+}
+
+/* ========================= HERO BANNER ========================= */
+.videoediting-banner {
+  max-width: 1150px;
+  min-height: 285px;
+  background: #183d29;
+  border-radius: 16px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  margin-bottom: 35px;
+}
+
+.banner-content {
+  padding: 42px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.banner-content>span {
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  color: #9bd5aa;
+}
+
+.banner-content h2 {
+  color: white;
+  font-size: 35px;
+  line-height: 1.15;
+  margin: 12px 0;
+  letter-spacing: -1px;
+}
+
+.banner-content p {
+  color: #c4d6ca;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 450px;
+}
+
+.banner-image {
+  height: 100%;
+  min-height: 285px;
+  position: relative;
+}
+
+.banner-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(24, 61, 41, 0.2), transparent);
+}
+
+.banner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ========================= SEARCH + FILTER ========================= */
+.videoediting-controls {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 45px;
+}
+
+.videoediting-controls input {
+  width: 100%;
+  max-width: 500px;
+  padding: 14px 16px;
+  border: 1px solid #d9e0db;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  background: white;
+}
+
+.videoediting-controls input:focus {
+  border-color: #718d7c;
+}
+
+.videoediting-controls select {
+  padding: 13px 35px 13px 14px;
+  border: 1px solid #d9e0db;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* ========================= SECTION HEADING ========================= */
+.opportunities-heading {
+  max-width: 1150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.opportunities-heading h2 {
+  font-size: 26px;
+  margin: 7px 0 0;
+}
+
+.opportunity-count {
+  color: #7a867e;
+  font-size: 13px;
+}
+
+/* ========================= TASK LIST ========================= */
+.videoediting-task-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 1150px;
+}
+
+/* ========================= TASK CARD ========================= */
+.videoediting-task-card {
+  background: white;
+  border: 1px solid #e5eae6;
+  border-radius: 13px;
+  overflow: hidden;
+  transition: 0.2s ease;
+}
+
+.videoediting-task-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+/* ========================= CARD IMAGE ========================= */
+.task-image {
+  height: 190px;
+  position: relative;
+  overflow: hidden;
+}
+
+.task-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.videoediting-task-card:hover .task-image img {
+  transform: scale(1.04);
+}
+
+.image-category {
+  position: absolute;
+  left: 15px;
+  bottom: 14px;
+  background: rgba(255, 255, 255, 0.94);
+  color: #365643;
+  padding: 6px 9px;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+/* ========================= CARD CONTENT ========================= */
+.task-card-content {
+  padding: 21px;
+}
+
+.task-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.student-name {
+  color: #557463;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.deadline {
+  color: #7c887f;
+  font-size: 11px;
+}
+
+.videoediting-task-card h2 {
+  margin: 10px 0 8px;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.videoediting-task-card p {
+  margin: 0;
+  color: #68736c;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* ========================= SKILLS ========================= */
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 17px 0;
+}
+
+.skill-list span {
+  background: #eef4ef;
+  color: #52705d;
+  padding: 6px 8px;
+  border-radius: 5px;
+  font-size: 10px;
+}
+
+/* ========================= META ========================= */
+.videoediting-task-meta {
+  display: flex;
+  gap: 18px;
+  padding: 13px 0;
+  border-top: 1px solid #edf0ed;
+  border-bottom: 1px solid #edf0ed;
+  color: #637168;
+  font-size: 11px;
+}
+
+/* ========================= BUTTON ========================= */
+.view-task-button {
+  width: 100%;
+  margin-top: 16px;
+  border: none;
+  background: #243b2c;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.view-task-button:hover {
+  background: #182a1f;
+}
+
+/* ========================= NO TASKS ========================= */
+.no-tasks {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.no-tasks h3 {
+  margin-bottom: 5px;
+}
+
+.no-tasks p {
+  color: #68736c;
+}
+
+/* ========================= DETAILS ========================= */
+.videoediting-task-details {
+  max-width: 1150px;
+}
+
+.detail-image {
+  width: 100%;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  margin: 20px 0 35px;
+}
+
+.detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail-image .videoediting-tag {
+  position: absolute;
+  left: 22px;
+  bottom: 20px;
+  background: white;
+}
+
+/* ========================= DETAIL LAYOUT ========================= */
+.detail-layout {
+  display: grid;
+  grid-template-columns: 1fr 330px;
+  gap: 55px;
+}
+
+.detail-main h1 {
+  font-size: 35px;
+  margin: 0 0 15px;
+}
+
+.task-description {
+  color: #68736c;
+  line-height: 1.7;
+  font-size: 15px;
+  max-width: 720px;
+}
+
+.detail-section {
+  margin-top: 35px;
+  padding-top: 25px;
+  border-top: 1px solid #e5eae6;
+}
+
+.detail-section h3 {
+  margin: 0 0 12px;
+  font-size: 16px;
+}
+
+.detail-section p {
+  color: #68736c;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+/* ========================= BENEFITS ========================= */
+.benefits {
+  display: grid;
+  gap: 12px;
+}
+
+.benefits div {
+  color: #536158;
+  font-size: 13px;
+}
+
+.benefits strong {
+  color: #55a96d;
+  margin-right: 12px;
+}
+
+/* ========================= SIDEBAR ========================= */
+.detail-sidebar {
+  background: white;
+  border: 1px solid #e5eae6;
+  border-radius: 13px;
+  padding: 23px;
+  height: fit-content;
+}
+
+.sidebar-label {
+  color: #7b877f;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.student-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0 23px;
+}
+
+.student-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #dceee1;
+  color: #315b40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.student-profile strong,
+.student-profile span {
+  display: block;
+}
+
+.student-profile strong {
+  font-size: 13px;
+}
+
+.student-profile span {
+  color: #7c887f;
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+/* ========================= DETAIL META ========================= */
+.detail-meta {
+  border-top: 1px solid #edf0ed;
+  border-bottom: 1px solid #edf0ed;
+  padding: 17px 0;
+  display: grid;
+  gap: 15px;
+}
+
+.detail-meta div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail-meta span {
+  color: #7b877f;
+  font-size: 11px;
+}
+
+.detail-meta strong {
+  color: #31553e;
+  font-size: 12px;
+}
+
+/* ========================= APPLY ========================= */
+.apply-task-button {
+  width: 100%;
+  margin-top: 20px;
+  border: none;
+  background: #243b2c;
+  color: white;
+  padding: 13px 25px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.apply-task-button:hover {
+  background: #182a1f;
+}
+
+.apply-task-button.applied {
+  background: #6d8374;
+}
+
+.join-note {
+  color: #8a948c;
+  font-size: 10px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ========================= RESPONSIVE ========================= */
+@media (max-width: 900px) {
+  .videoediting-page {
+    padding: 30px;
+  }
+
+  .videoediting-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .banner-image {
+    min-height: 220px;
+  }
+
+  .videoediting-task-list {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .videoediting-page {
+    padding: 25px 20px;
+  }
+
+  .videoediting-header {
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .videoediting-header h1 {
+    font-size: 29px;
+  }
+
+  .videoediting-controls {
+    flex-direction: column;
+  }
+
+  .videoediting-controls input {
+    max-width: none;
+  }
+
+  .banner-content {
+    padding: 30px;
+  }
+
+  .banner-content h2 {
+    font-size: 28px;
+  }
+
+  .opportunities-heading {
+    align-items: flex-start;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .detail-image {
+    height: 240px;
+  }
+}
